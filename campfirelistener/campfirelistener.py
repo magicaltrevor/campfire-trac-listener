@@ -17,7 +17,7 @@ class CampfireListener(Component):
 
     def _sendText(self, ticketid, text):
         try:
-            c = pinder.Campfire(self.subdomain, self.apiToken, ssl)
+            c = pinder.Campfire(self.subdomain, self.apiToken, self.ssl)
             room = c.room(self.roomId)
             room.speak("%s: ticket #%i (http://%s%s/ticket/%i) %s" % (self.prefix, ticketid, self.tracfqdn, self.projectPath, ticketid, text))
 
