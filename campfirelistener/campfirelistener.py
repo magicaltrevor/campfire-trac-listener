@@ -13,7 +13,7 @@ class CampfireListener(Component):
     subdomain = Option('campfire', 'subdomain', '')
     apiToken = Option('campfire', 'apitoken', '')
     roomId = Option('campfire', 'roomid', '')
-	ssl = BoolOption('campfire', 'ssl', 'true')
+    ssl = BoolOption('campfire', 'ssl', 'true')
 
     def _sendText(self, ticketid, text):
         try:
