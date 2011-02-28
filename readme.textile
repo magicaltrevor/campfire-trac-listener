@@ -33,6 +33,7 @@ trachost = trac.yourhost.com
 subdomain = campfire_subdomain
 apitoken = yourCampfireAPIToken
 roomid = RoomID
+ssl = false (turns ssl to campfire off. On by default)
 </pre>
 
 You can find your room ID at the tail end of the URL when you are in your chat room.
