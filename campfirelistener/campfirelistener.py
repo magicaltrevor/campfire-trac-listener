@@ -26,10 +26,10 @@ class CampfireListener(Component):
             return
 
     def ticket_created(self, ticket):
-        self._sendText(ticket.id, "\"%s\" created by %s." % (ticket.values['summary'][0:100], ticket.values['reporter']))
+        self._sendText(ticket.id, "\"%s\" created by %s. Milestone: %s" % (ticket.values['summary'][0:100], ticket.values['reporter'], ticket.values['milestone']))
 
     def ticket_changed(self, ticket, comment, author, old_values):
-        self._sendText(ticket.id, "changed by %s, Comment: %s." % (author, comment[0:100]))
+        self._sendText(ticket.id, "changed by %s, Comment: %s. Milestone: %s" % (author, comment[0:100]), ticket.values['milestone'])
 
     def ticket_deleted(self, ticket):
         self._sendText(ticket.id, "Ticket deleted")
